@@ -1,0 +1,399 @@
+@charset "utf-8";
+
+/* 初期設定 */
+body {
+  color: #222;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+
+p {
+  letter-spacing: 0.08em;
+  line-height: 1.8;
+}
+/* ホーム */
+/* ヘッダー */
+header {
+  background-color: #c979ca;
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    display: block;
+
+    img {
+      display: block;
+      height: 60px;
+    }
+  }
+
+  nav {
+    color: #fff;
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+
+    a {
+      font-size: 14px;
+      font-weight: bold;
+
+      &:hover {
+        color: #BAE4BE;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/* ヒーローセクション */
+.hero {
+  color: #000;
+  text-align: center;
+  /* シャドウによって字の枠線に見せかける */
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+  height: 640px;
+  background-image: url(../img/trpg_people.png);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 52px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+}
+
+/* 見出し */
+.midashi {
+  padding: 60px 0 0px;
+
+  .midashi-title {
+    text-align: center;
+    margin: 0 0 80px;
+
+    h2 {
+      color: #000;
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 260px;
+      height: 15px;
+      background-color: #c979ca;
+      margin: 20px auto 0;
+    }
+  }
+}
+
+.text {
+  text-align: center;
+  width: 80%;
+  /* 横幅を指定 */
+  margin: 0 auto;
+
+  p {
+    font-size: 20px;
+  }
+}
+
+.profile-margin {
+  background-color: #FDF8D4;
+  padding: 20px;
+
+  .profile {
+    width: 80%;
+    margin: 0 auto;
+    /* 上下:0、左右:autoで中央寄せ */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    justify-content: space-between;
+    gap: 30px;
+
+
+    .image {
+      border-radius: 50px;
+      /* はみ出た部分は隠す */
+      overflow: hidden;
+      border: 3px solid black;
+
+      img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+      }
+    }
+
+    .profile-text {
+      h3 {
+        font-size: 32px;
+        font-weight: bold;
+        margin: 35px;
+      }
+
+      p {
+        font-size: 14px;
+        margin: 35px;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #c979ca;
+  color: #fff;
+  justify-items: center;
+  padding: 20px 0;
+
+  p {
+    font-size: 14px
+  }
+
+  nav {
+    ul {
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+
+    a {
+      font-size: 14px;
+
+      &:hover {
+        color: #BAE4BE;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .syuttenn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    justify-content: space-between;
+    gap: 30px;
+
+    .CoC,
+    .emocroa{
+      h4 {
+        text-align: center;
+        font-size: 14px;
+      }
+
+      p {
+        text-align: center;
+        font-size: 10px;
+
+        a {
+          &:hover {
+            color: #BAE4BE;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* TRPG */
+
+.explane-margin {
+  background-color: #FDF8D4;
+  padding: 20px;
+
+  .profile {
+    width: 80%;
+    /* 横幅を指定 */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: start;
+    justify-content: space-between;
+    gap: 30px;
+
+
+    .image {
+      border-radius: 50px;
+      border: 3px solid black;
+
+      img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+      }
+    }
+
+    .explane-text {
+      p {
+        font-size: 14px;
+        margin: 35px;
+      }
+    }
+  }
+}
+
+/* シナリオ */
+.favorite-layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  /* 上に合わせる */
+  align-items: start;
+  justify-content: start;
+  gap: 30px;
+
+  .image-layout {
+    p {
+      font-size: 14px;
+      text-align: left;
+      margin: 5px;
+    }
+
+    .image {
+      width: 300px;
+      height: 300px;
+      border-radius: 50px;
+      border: 3px solid black;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+  }
+}
+ dl {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    dt,
+    dd {
+      font-size: 14px;
+      padding: 10px;
+      border-top: 1px solid #2a2a2a;
+
+      a {
+        &:hover {
+          color: #BAE4BE;
+          text-decoration: underline;
+        }
+      }
+
+      h3 {
+        font-size: 32px;
+        font-weight: bold;
+      }
+    }
+  }
+/* メディアクエリ */
+@media screen and (max-width: 1000px){
+  .favorite-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  .image-layout {
+    p {
+      font-size: 14px;
+      text-align: left;
+      margin: 5px;
+    }
+
+    .image {
+      width: 100%;
+      height: auto;
+      border-radius: 50px;
+      border: 3px solid black;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+  }
+}
+}
+
+/* お問い合わせ */
+.yourfavorite{
+  p{
+    text-align: center;
+  }
+  .form-box {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 60px;
+  background-color: #FDF8D4;
+  box-shadow: 0px 24px 40px rgb(0 0 0 / 0.08);
+}
+
+.form-item {
+  display: grid;
+  gap: 10px;
+
+  label {
+    font-size: 14px;
+  }
+/* 直後の要素を飾る */
+  + .form-item {
+    margin-top: 30px;
+  }
+
+  input,
+  textarea {
+    border: 1px solid #aaa;
+    padding: 0.8em 0.5em;
+    border-radius: 8px;
+    /* 入力例 */
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  button {
+    font-size: 16px;
+    display: inline-block;
+    color: #fff;
+    background-color: #c979ca;
+    border: none;
+    padding: 1em 2em;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: #9b5d91;
+    }
+  }
+}
+}

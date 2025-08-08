@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- GoogleFontsの読み込み -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script2.js" defer></script>
+  <title>TRPGを紹介</title>
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header>
+    <h1><a href="index.html" class="logo">
+        <img src="img/icon-ネコ-64.png" alt="TRPG紹介ロゴ">
+      </a>
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="TRPG.html">TRPGとは</a></li>
+        <li><a href="sinario.html">シナリオ</a></li>  
+      <li><a href="contact.html">お問い合わせ</a></li>      </ul>
+    </nav>
+  </header>
+
+  <!-- メイン -->
+  <main>
+      <section class="midashi" >
+      <div class="midashi-title">
+        <h2>お問い合わせ</h2>
+      </div>
+      <div class="yourfavorite">
+        <div class="heading-group">
+          <p>どこか問題や不備などがある場合、こちらにご入力いただきますようお願いいたします。</p>
+          <p>またこんなシナリオオススメだよ～などあればご入力いただけますと幸いです。</p>
+        </div>
+        <div class="form-layout">
+    <form class="form-box" id="contact-submit" action="https://api.staticforms.xyz/submit" method="post">
+      <!-- static formsの設定　-->
+      <input type="hidden" name="accessKey" value="sf_mk2j0n5cd7fjdj0cjmf83dic">
+      <input type="hidden" name="redirectTo" value="index.html">
+     
+      <div class="form-item">
+        <label>ご氏名</label>
+        <input type="text" name="name" placeholder="例）田中 太郎">
+      </div>
+      <div class="form-item">
+        <label>メールアドレス</label>
+        <input type="email" name="email" placeholder="例）example@example.com">
+      </div>
+      <div class="form-item">
+        <label>お問い合わせ内容</label>
+        <textarea rows="5" name="message" placeholder="お問い合わせ内容をご入力ください"></textarea>
+      </div>
+      <div class="form-item">
+        <button type="submit">送信する</button>
+      </div>
+    </form>
+      </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- フッター -->
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="TRPG.html">TRPGとは</a></li>
+        <li><a href="sinario.html">シナリオ</a></li>  
+      <li><a href="contact.html">お問い合わせ</a></li>    </nav>
+    <p>本サイトは非公式のファンサイトです。</p>
+    <div class="syuttenn">
+      <div class="CoC">
+      <h4>クトゥルフ神話TRPG</h4>
+    <p>Call of Cthulhu is copyright ©︎1981, 2015, 2019 by Chaosium Inc. ; 
+      <br>all rights reserved.PUBLISHED BY KADOKAWA CORPORATION
+      <br><a href="https://product.kadokawa.co.jp/cthulhu/"target="_blank">公式サイト:https://www.arclight.co.jp/</a>
+    </p>
+    </div>
+    <div class="emocroa">
+    <h4>エモクロアTRPG</h4>
+    <p>Copyright © TEAM DICETOUS 2021 All Rights Reserved.
+      <br><a href="https://emoklore.dicetous.com/"target="_blank">公式サイト:https://emoklore.dicetous.com/</a>
+    </p>
+    </div>
+    </div>
+  </footer>
+</body>
+
+</html>
